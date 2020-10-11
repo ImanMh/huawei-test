@@ -1,0 +1,20 @@
+<html>
+  	<head>
+		<script>
+			const options = {
+				enableHighAccuracy: false, 
+				maximumAge: 30000, 
+				timeout: 10000
+			}
+
+			navigator.geolocation.getCurrentPosition((p) => {
+				document.write(JSON.stringify(p.coords.latitude + ',' + p.coords.longitude));
+			}, (error) => {
+				document.write((error.code + ' ' + error.message));
+			}, options);
+		</script>
+	</head>
+	<body>
+		<h1>6</h1>
+	</body>
+</html>
